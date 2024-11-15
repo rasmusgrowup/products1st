@@ -1,0 +1,34 @@
+@import "../common/sizes";
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: $l;
+  padding: 2vw;
+}
+
+.logo {
+  color: var(--main-accent);
+  font-size: 1.75vw;
+  margin-right: 3vw;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.nav .ul {
+  display: flex;
+  font-weight: 500;
+  list-style: none;
+  padding: 0;
+
+  .li {
+    padding: 0 1rem;
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: .33rem;
+    }
+  }
+}

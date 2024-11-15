@@ -1,0 +1,68 @@
+:root {
+  --main-black: rgb(0, 0, 0);
+  --main-white: rgb(255, 255, 255);
+  --main-accent: rgb(0, 0, 255);
+  --main-accent-light: rgb(115, 115, 255);
+  --main-font-grey: rgb(128, 128, 128);
+  --main-line-color: rgb(234, 234, 234);
+  --main-light-grey: rgb(250, 250, 250);
+}
+
+@font-face {
+  font-family: "BwGradual";
+  src: url("../../app/fonts/BwGradualDEMO-ExtraBold.otf") format("opentype"),
+  url("../../app/fonts/BwGradualDEMO-ExtraBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BwGradual";
+  src: url("../../app/fonts/BwGradualDEMO-Bold.otf") format("opentype"),
+  url("../../app/fonts/BwGradualDEMO-Bold.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BwGradual";
+  src: url("../../app/fonts/BwGradualDEMO-Medium.otf") format("opentype"),
+  url("../../app/fonts/BwGradualDEMO-Medium.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BwGradual";
+  src: url("../../app/fonts/BwGradualDEMO-MediumItalic.otf") format("opentype"),
+  url("../../app/fonts/BwGradualDEMO-MediumItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--main-light-grey);
+  color: var(--main-black);
+  font-family: "BwGradual", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
