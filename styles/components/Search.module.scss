@@ -6,6 +6,10 @@
   border-radius: .75rem;
   padding: 2rem;
   width: 100%;
+
+  @media (max-width: $m) {
+    padding: 1rem;
+  }
 }
 
 .searchHeader {
@@ -37,6 +41,10 @@
   &:focus-visible {
     outline-width: 0;
     outline-style: none;
+  }
+
+  @media (max-width: $m) {
+    width: 100%;
   }
 }
 
@@ -75,6 +83,10 @@
   .headerSupplierName {
     flex: 2;
   }
+
+  @media (max-width: $m) {
+    padding: 1rem 0;
+  }
 }
 
 .product {
@@ -107,6 +119,10 @@
   &:hover {
     background-color: var(--main-light-grey);
   }
+
+  @media (max-width: $m) {
+    padding: 1rem 0;
+  }
 }
 
 .buttonContainer {
@@ -130,7 +146,8 @@
   font-size: 1rem;
   padding: 1rem;
   opacity: 1;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
 
   &:hover {
     opacity: .8;

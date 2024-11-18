@@ -1,0 +1,35 @@
+@import "sizes";
+
+.linkTree {
+  display: flex;
+  color: var(--main-font-grey);
+  width: fit-content;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.productContainer {
+  background-color: white;
+  border: 1px solid var(--main-line-color);
+  border-radius: .75rem;
+  margin: 1rem auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.detailsList {
+  line-height: 1.5;
+  list-style: none;
+  padding: 0;
+}
+
+.productTitle {
+  margin-bottom: 1rem;
+}
+
+.productPrice {
+  margin-top: 1rem;
+  text-align: right;
+}

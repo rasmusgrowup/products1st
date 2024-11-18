@@ -1,40 +1,40 @@
 
 export interface Product {
-	readonly id? : number
-	title : string
-	productno : string
-	barcode? : string
-	serieno? : string
-	price? : number
-	costprice? : number
-	stockno? : number
-	readonly previousstockno? : number
-	readonly stocknochangetype? : "absolute" | "relative"
-	stockmin? : number
-	stockmax? : number
-	suppliername? : string
-	color? : string
-	styleno? : string
-	size? : string
-	brand? : string
-	vat? : number
-	lastordered? : string
-	tags? : Array<any>
-	customfield1? : string
-	customfield2? : string
-	customfield3? : string
-	readonly created? : string
-	readonly reservedstock? : number
-	readonly tobeordered? : number
-	readonly onshoppinglist? : number
-	readonly ordered? : number
-	readonly needsordering? : number
-	readonly flexposuid? : string
-	readonly flexposviewgroup? : string
-	flexposviewgroupid? : string
-	flexposfinancegroup? : string
-	flexposfinancegroupid? : string
-	flexposbrandid? : string
+	readonly id?: number;
+	title: string;
+	productno: string | null;
+	barcode?: string | null;         // Allow null values
+	serieno?: string | null;          // Allow null values for compatibility
+	price?: number | null;
+	costprice?: number | null;
+	stockno?: number | null;          // Allow null values
+	readonly previousstockno?: number | null;
+	readonly stocknochangetype?: "absolute" | "relative";
+	stockmin?: number | null;
+	stockmax?: number | null;
+	suppliername?: string | null;     // Allow null values
+	color?: string | null;            // Allow null values
+	styleno?: string | null;          // Allow null values
+	size?: string | null;             // Allow null values
+	brand?: string | null;            // Allow null values
+	vat?: number | null;
+	lastordered?: string | null;
+	tags?: Array<any>;
+	customfield1?: string | null;     // Allow null values
+	customfield2?: string | null;     // Allow null values
+	customfield3?: string | null;     // Allow null values
+	readonly created?: string | null;
+	readonly reservedstock?: number | null;
+	readonly tobeordered?: number | null;
+	readonly onshoppinglist?: number | null;
+	readonly ordered?: number | null;
+	readonly needsordering?: number | null;
+	readonly flexposuid?: string | null;
+	readonly flexposviewgroup?: string | null;
+	flexposviewgroupid?: string | null;
+	flexposfinancegroup?: string | null;
+	flexposfinancegroupid?: string | null;
+	flexposbrandid?: string | null;
 }
 
 export interface SearchProductResponse {

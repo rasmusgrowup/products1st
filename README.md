@@ -3,19 +3,55 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Running the project
 
-First, run the development server:
+First, install the dependencies.
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## About the solution
+
+The solution has been developed using Next.js, with the new App Router architecture.
+The architecture follows best practice rules in how you would structure a Next.js project.
+The key components of the application can be found in the ```app``` directory.
+In this directory you'll find the pages of the app, it's layout definitions and the components
+used on each page. The components are reusable across the app.
+
+Dynamic routing has been used to render a page for each product, meaning if you click on a product
+on the home page, you'll get redirected to a subpage for that specific product. ```app/products/[id]```
+is the route that enables this functionality. 
+
+The product.json file has been moved to the ```data``` directory.
+
+A product API has been developed to enable the search function, and to mimic an actual backend API serving the product data.
+The API can be found in ```pages/api```, and features both an API that enables searching the entire product baglog,
+and an API that serves the data for a single product.
+
+SCSS modules are used to style the components. A global css file provides global styling, such as font declarations, color
+variables, etc. The site has been made responsive, although you may find that the responsiveness needs further tweaking,
+because responsiveness has not been a major focus of this project.
+
+The product.d.ts file has been moved to the ```types``` directory, where types of different sorts is declared.
+The file has been modified to better support typescript, meaning that **union types** has been added to each type.
+
+### About the search functionality
+The search functionality of this app fulfills the requirements described in the task description.
+However, for a better user experience, session memory could be used to store the search queries,
+so that when a user navigates from the search page to a product page, and back again, the search query
+would remain, so that the user wouldn't have to repeat their searches. But for this hand-in, this has not
+been the primary focus. 
 
 ## About the project
 

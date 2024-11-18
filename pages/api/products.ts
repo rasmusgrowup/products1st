@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { Product, SearchProductResponse } from '../../types/products';
-import productsData from '../../data/products.json';
+import { Product, SearchProductResponse } from '@/types/products';
+import productsData from '@/data/products.json';
 
 const products: Product[] = Array.isArray(productsData.content) ? (productsData.content as unknown as Product[]) : [];
 
@@ -33,6 +33,7 @@ export default function handler(
         filteredProducts = filteredProducts.filter(
             (product) =>
                 product.price !== undefined &&
+                product.price !== null &&
                 product.price >= min &&
                 product.price <= max
         );

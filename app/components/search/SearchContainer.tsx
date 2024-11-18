@@ -6,6 +6,7 @@ import axios from 'axios';
 import debounce from 'lodash/debounce';
 import { Product, SearchProductResponse } from '@/types/products';
 import styles from "@/styles/components/Search.module.scss";
+import Link from "next/link";
 
 const SearchContainer: React.FC = () => {
     const [query, setQuery] = useState<string>('');
@@ -104,15 +105,17 @@ const SearchContainer: React.FC = () => {
                     {results.length > 0 &&
                         <li className={styles.productListHeader}>
                             <h3 className={styles.headerTitle}>Produktnavn</h3>
-                            <p className={styles.headerSupplierName}>Producent</p>
+                            <p className={styles.headerSupplierName}>Forhandler</p>
                             <p className={styles.headerPrice}>Pris</p>
                         </li>
                     }
                     {results.map((product) => (
-                        <li key={product.id} className={styles.product}>
-                            <h3 className={styles.productTitle}>{product.title}</h3>
-                            <p className={styles.productSupplierName}>{product.suppliername || 'Unknown'}</p>
-                            <p className={styles.productPrice}>{product.price ? `${product.price + ' DKK'}` : `Gratis`}</p>
+                        <li key={product.id}>
+                            <Link href={`/products/${product.id}`} className={styles.product}>
+                                <h3 className={styles.productTitle}>{product.title}</h3>
+                                <p className={styles.productSupplierName}>{product.suppliername || 'Unknown'}</p>
+                                <p className={styles.productPrice}>{product.price}{',- DKK'}</p>
+                            </Link>
                         </li>
                     ))}
                 </ul>}

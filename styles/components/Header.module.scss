@@ -6,12 +6,12 @@
   justify-content: space-between;
   margin: 0 auto;
   max-width: $l;
-  padding: 2vw;
+  padding: clamp(1rem, 2vw, 60px);
 }
 
 .logo {
   color: var(--main-accent);
-  font-size: 1.75vw;
+  font-size: clamp(1.5rem, 2vw, 60px);
   margin-right: 3vw;
   font-weight: 500;
   letter-spacing: -0.05em;
